@@ -14,7 +14,7 @@ import io.pinecone.configs.PineconeConnection;
 @PropertySource("classpath:application.secrets.properties")
 public class PineconeCustomConfig {
 
-    @Value("${pinecone.api.key}")
+    @Value("${PINECONE_API_KEY}")
     private String apiKey;
 
     @Value("${pc.host.name}")
