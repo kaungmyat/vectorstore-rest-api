@@ -3,7 +3,6 @@ package com.example.vectorstore.configs;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 
 import io.pinecone.clients.Index;
 import io.pinecone.clients.Pinecone;
@@ -11,10 +10,9 @@ import io.pinecone.configs.PineconeConfig;
 import io.pinecone.configs.PineconeConnection;
 
 @Configuration
-@PropertySource("classpath:application.secrets.properties")
 public class PineconeCustomConfig {
 
-    @Value("${PINECONE_API_KEY}")
+    @Value("${pinecone.api.key}")
     private String apiKey;
 
     @Value("${pc.host.name}")
